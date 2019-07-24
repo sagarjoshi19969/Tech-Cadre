@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Choose a type </title>
+<style type="text/css">
+/* LESS Variables */
+/* -------------- */
+/* General */
+/* Button Bar */
+/* Button */
+/* Elements */
+/* -------- */
+html {
+  line-height: 1.5;
+  text-align: center;
+}
+h1 {
+  text-size: 22px;
+}
+a {
+  text-decoration: none;
+}
+/* Layout */
+/* ------ */
+h1.welcome,
+.button-bar {
+  margin: 20px auto;
+  height: auto;
+}
+.button-bar {
+  background: #ededed;
+  padding: 40px;
+}
+/* General Button */
+/* -------------- */
+.button {
+  position: relative;
+  margin: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 2.8px;
+  padding-bottom: 2.8px;
+  background: #0d5287;
+  color: white;
+  font-size: 14px;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+.button:hover {
+  background: #0585e8;
+}
+/* Arrow Buttons */
+/* ------------- */
+.next::after,
+.prev::after {
+  border-style: solid;
+}
+/* Next Button */
+/* ----------- */
+.next::after {
+  right: -22px;
+  border-width: 11px;
+  border-color: transparent transparent transparent #0d5287;
+}
+.next:hover::after {
+  border-left-color: #0585e8;
+}
+/* Prev Button */
+/* ----------- */
+.prev::after {
+  left: -22px;
+  border-color: transparent #0d5287 transparent transparent;
+  border-width: 11px;
+}
+.prev:hover::after {
+  border-right-color: #0585e8;
+}
+
+</style>
+</head>
+<body>
+<h1 class="welcome">Choose A Type Of Build</h1>
+
+<div class="button-bar">
+  <a href="ResumeLog.jsp" class="button prev">Build A Resume And Save Data for Future Edits</a>
+  <a href="InstantIndex.jsp" class="button next">Instant Resume Build</a>
+</div>
+</body>
+</html>
